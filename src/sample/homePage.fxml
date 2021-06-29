@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: fafafa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomePageController">
+   <children>
+      <Label layoutX="13.0" layoutY="472.0" prefHeight="28.0" prefWidth="430.0" style="-fx-border-color: silver; -fx-border-radius: 5;" text="  Соединение с базой данных:" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="connSuccessLbl" layoutX="218.0" layoutY="462.0" prefHeight="28.0" prefWidth="194.0" style="-fx-text-fill: green;" text="Подключено" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="210.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="89.0" prefHeight="30.0" prefWidth="350.0" text="Выберите таблицу" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="89.0">
+         <font>
+            <Font name="Calibri Light" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="driversBtn" layoutX="177.0" layoutY="133.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Drivers" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="135.0" />
+      <Button fx:id="vehiclesBtn" layoutX="67.0" layoutY="133.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Vehicles" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="135.0" />
+      <Button fx:id="tariffsBtn" layoutX="286.0" layoutY="133.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Tariffs" AnchorPane.leftAnchor="290.0" AnchorPane.topAnchor="135.0" />
+      <Button fx:id="ordersBtn" layoutX="120.0" layoutY="192.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Orders" AnchorPane.leftAnchor="116.0" AnchorPane.topAnchor="200.0" />
+      <Button fx:id="paymentInfoBtn" layoutX="230.0" layoutY="192.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="PaymentInfo" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="200.0" />
+      <Label alignment="CENTER" layoutX="50.0" layoutY="279.0" prefHeight="30.0" prefWidth="350.0" text="Работа с XML-файлами" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="280.0">
+         <font>
+            <Font name="Calibri Light" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="importXMLBtn" layoutX="120.0" layoutY="318.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Импорт" AnchorPane.leftAnchor="116.0" AnchorPane.topAnchor="325.0" />
+      <Button fx:id="exportXMLBtn" layoutX="230.0" layoutY="318.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="101.0" text="Экспорт" AnchorPane.leftAnchor="231.0" AnchorPane.topAnchor="325.0" />
+   </children>
+</AnchorPane>
