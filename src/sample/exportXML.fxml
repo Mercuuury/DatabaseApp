@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane hgap="3.0" prefHeight="267.0" prefWidth="392.0" vgap="3.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.exportXMLController">
+<GridPane hgap="3.0" prefHeight="267.0" prefWidth="392.0" vgap="3.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ExportXMLController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="304.0" prefWidth="304.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="79.0" minWidth="71.0" prefWidth="79.0" />

@@ -165,41 +165,45 @@ public class ViewTableController {
 
     @SuppressWarnings("unchecked")
     protected void updateTable(boolean isNew){
-        if(isNew) {
-            tableView.getItems().removeAll();
-            tableView.getColumns().removeAll();
-        }
-        switch (tableType) {
-            case "Vehicles":
-                Vehicles vehicles = new Vehicles(conn);
-                tableView.setItems(vehicles.getAll());
-                if (isNew)
-                    createColumns(new String[]{"idVehicles", "vehicleNum", "brand", "type", "year", "color", "vehicleClass"});
-                break;
-            case "Drivers":
-                Drivers drivers = new Drivers(conn);
-                tableView.setItems(drivers.getAll());
-                if (isNew)
-                    createColumns(new String[]{"idDrivers", "surname", "name", "secondName", "birthday", "passSeries", "passNumber", "vehicle"});
-                break;
-            case "Tariffs":
-                Tariffs tariffs = new Tariffs(conn);
-                tableView.setItems(tariffs.getAll());
-                if (isNew)
-                    createColumns(new String[]{"idTariffs", "name", "timeOfDay", "distanceFromCityCenter", "pricePerKM"});
-                break;
-            case "Orders":
-                Orders orders = new Orders(conn);
-                tableView.setItems(orders.getAll());
-                if (isNew)
-                    createColumns(new String[]{"idOrders", "idDrivers", "length", "passengerCount", "addressSrc", "addressDst", "date", "time", "status"});
-                break;
-            case "PaymentInfo":
-                PaymentInfo paymentInfo = new PaymentInfo(conn);
-                tableView.setItems(paymentInfo.getAll());
-                if (isNew)
-                    createColumns(new String[]{"idOrders", "idTariffs", "mileage", "price"});
-                break;
+        try {
+            if (isNew) {
+                tableView.getItems().removeAll();
+                tableView.getColumns().removeAll();
+            }
+            switch (tableType) {
+                case "Vehicles":
+                    Vehicles vehicles = new Vehicles(conn);
+                    tableView.setItems(vehicles.getAll());
+                    if (isNew)
+                        createColumns(new String[]{"idVehicles", "vehicleNum", "brand", "type", "year", "color", "vehicleClass"});
+                    break;
+                case "Drivers":
+                    Drivers drivers = new Drivers(conn);
+                    tableView.setItems(drivers.getAll());
+                    if (isNew)
+                        createColumns(new String[]{"idDrivers", "surname", "name", "secondName", "birthday", "passSeries", "passNumber", "vehicle"});
+                    break;
+                case "Tariffs":
+                    Tariffs tariffs = new Tariffs(conn);
+                    tableView.setItems(tariffs.getAll());
+                    if (isNew)
+                        createColumns(new String[]{"idTariffs", "name", "timeOfDay", "distanceFromCityCenter", "pricePerKM"});
+                    break;
+                case "Orders":
+                    Orders orders = new Orders(conn);
+                    tableView.setItems(orders.getAll());
+                    if (isNew)
+                        createColumns(new String[]{"idOrders", "idDrivers", "length", "passengerCount", "addressSrc", "addressDst", "date", "time", "status"});
+                    break;
+                case "PaymentInfo":
+                    PaymentInfo paymentInfo = new PaymentInfo(conn);
+                    tableView.setItems(paymentInfo.getAll());
+                    if (isNew)
+                        createColumns(new String[]{"idOrders", "idTariffs", "mileage", "price"});
+                    break;
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         }
     }
 

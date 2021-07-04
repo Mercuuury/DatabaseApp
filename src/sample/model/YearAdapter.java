@@ -11,7 +11,6 @@ public class YearAdapter extends XmlAdapter<String, Date> {
     @Override
     public String marshal(Date v) {
         synchronized (dateFormat) {
-            System.out.println(dateFormat.format(v));
             return dateFormat.format(v);
         }
     }

@@ -8,7 +8,7 @@ import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
 import java.io.File;
 
-public class importXMLController {
+public class ImportXMLController {
 
     @FXML
     private VBox vBox;

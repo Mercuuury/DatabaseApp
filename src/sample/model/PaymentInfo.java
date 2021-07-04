@@ -27,7 +27,6 @@ public class PaymentInfo {
         String sqlQuery = "INSERT INTO `paymentInfo` (`idOrders`, `idTariffs`, `mileage`, `price`) VALUES ('" +
                 payment.getIdOrders() + "', '" + payment.getIdTariffs() + "', '" +
                 payment.getMileage() + "', '" + payment.getPrice() + "')";
-        System.out.println(sqlQuery);
         Statement statement = null;
 
         try {
